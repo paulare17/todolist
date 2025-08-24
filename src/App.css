@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+main{
+  background-color: #cca3da;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formulari{
+  width: 100%;
+  height: auto; /* ocupa tota l'altura de la finestra */
+  margin-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#form{
+  display: flex;
+  gap: 30px;
+  padding: 80px;
+align-items: center;
+justify-content: center;
 }
 
-.card {
-  padding: 2em;
+.add{
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: #E0DB09;
+}
+.add:hover{
+  background-color: #3FE009;
 }
 
-.read-the-docs {
-  color: #888;
+.input-form {
+  width: 600px;
+  height: 60px;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.navbar {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background-color: #AB09E0;
+  color : #E0DB09;
+} 
+
+.list-btn {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.fosc{
+  background-color: #202020;
+ margin-left: auto;
+}
+
+.btn{
+  background-color: #3FE009;
+  color: white;
+  border: none;
+}
+.btn:hover{
+   background-color: #E0DB09;
+  color: #AB09E0;
+  border: none;
+}
+
+
+
+
+
+/* pantalla mitjana */
+@media (min-width: 600px) and (max-width: 1024px)  {
+.navbar {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background-color: #AB09E0;
+  color : #E0DB09;
+}
+
+.list-btn {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  justify-content: space-around;
+}
+
 }
