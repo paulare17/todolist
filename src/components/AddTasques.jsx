@@ -2,18 +2,20 @@ import React, { useState } from "react";
 
 export default function AddTasques({ addTasca }) {
   const [input, setInput] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input != "") {
-      addTasca(input);
+      const newTask = {
+        id: crypto.randomUUID(),
+        input,
+        done: false
+      }
+      addTasca(newTask);
       setInput("");
     }
   };
-
   return (
     <main>
-
     <div className="formulari">
       <form id="form" onSubmit={handleSubmit}>
         <input

@@ -1,33 +1,21 @@
-import { useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
+import Home from "./Home";
 import AddTasques from "./components/AddTasques";
 import Tasques from "./components/Tasques";
+import Header from "./components/Header";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+
 
 function App() {
-  const [tasques, setTasques] = useState([]);
-  const addTasca = (task) => {
-    setTasques([...tasques, task]);
-    console.log(task);
-  };
-
   return (
-    <BrowserRouter>
+    <>
+      <Header />
       <Routes>
-        <Route element={<Layout tasques={tasques} addTasca={addTasca} />}>
-          <Route
-            path="/"
-            element={
-              <>
-                <AddTasques addTasca={addTasca} />
-                <Tasques tasques={tasques} />
-              </>
-            }
-          />
-        </Route>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="pendents" element={<Home/>}></Route>
+        <Route path="acabades" element={<Home/>}></Route>
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

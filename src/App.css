@@ -4,32 +4,40 @@
   box-sizing: border-box;
 }
 
-main{
-  background-color: #cca3da;
+body {
+  background-color: #289ba1;
 }
 
-.formulari{
+html{
+  height: 100%;
+}
+
+.title{
+  cursor: pointer;
+}
+
+.formulari {
   width: 100%;
-  height: auto; /* ocupa tota l'altura de la finestra */
+  height: auto; 
   margin-top: 80px;
 }
 
-#form{
+#form {
   display: flex;
   gap: 30px;
   padding: 80px;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.add{
+.add {
   border-radius: 50%;
   height: 60px;
   width: 60px;
-  background-color: #E0DB09;
+  background-color: #f29b44;
 }
-.add:hover{
-  background-color: #3FE009;
+.add:hover {
+  background-color: #f2be4e;
 }
 
 .input-form {
@@ -49,56 +57,87 @@ justify-content: center;
   position: fixed;
   width: 100%;
   padding: 20px;
-  background-color: #AB09E0;
-  color : #E0DB09;
-} 
+  background-color: #f29b44;
+  color: #323954;
+}
 
 .list-btn {
   display: flex;
   list-style: none;
-  width: 40%;
+  width: 30%;
   justify-content: space-evenly;
 }
 
-.fosc{
+.fosc {
   background-color: #202020;
- margin-left: auto;
+  margin-left: auto;
 }
 
-.btn{
-  background-color: #3FE009;
-  color: white;
+.btn {
+  background-color: #414c6b;
+  color: #f29b44;
   border: none;
 }
-.btn:hover{
-   background-color: #E0DB09;
-  color: #AB09E0;
+.btn:hover {
+  background-color: #289ba1;
+  color: #323954;;
   border: none;
 }
 
+li {
+  list-style: none;
+}
 
+.tasques {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin: auto;
+}
 
+.tasca {
+  margin: 30px;
+  padding: 5px;
+  width: 700px;
 
+  justify-content: center !important;
+  display: flex;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.tasca:hover {
+  background-color: #f29b44;
+}
+
+.footer{
+text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f29b44;
+}
 
 /* pantalla mitjana */
-@media (min-width: 600px) and (max-width: 1024px)  {
-.navbar {
-  gap: 20px;
-  display: flex;
-  align-items: center;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  padding: 20px;
-  background-color: #AB09E0;
-  color : #E0DB09;
-}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .navbar {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+  }
 
-.list-btn {
-  display: flex;
-  list-style: none;
-  width: 70%;
-  justify-content: space-around;
-}
-
+  .list-btn {
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: space-around;
+  }
 }
